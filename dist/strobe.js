@@ -8,3 +8,4 @@ board.on("ready", function () {
     // Strobe the pin on/off, defaults to 100ms phases
     led.strobe(100);
 });
+//# sourceMappingURL=strobe.js.map
