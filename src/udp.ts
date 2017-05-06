@@ -13,7 +13,7 @@ export function listener(srl: arduino.Arduino) {
 
     server.on('message', function (message, remote) {
         console.log(remote.address + ':' + remote.port + ' - ' + message);
-        srl.ToggleLED();
+        srl.LED();
     });
 
     server.bind(PORT);
