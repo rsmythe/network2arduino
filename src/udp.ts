@@ -11,9 +11,9 @@ export function listener(srl: arduino.Arduino) {
         console.log('UDP Server listening on ' + address.address + ':' + address.port);
     });
 
-    server.on('message', function (message, remote) {
+    server.on('message', function (message: number, remote) {
         console.log(remote.address + ':' + remote.port + ' - ' + message);
-        srl.LED();
+        srl.LED(message);
     });
 
     server.bind(PORT);
